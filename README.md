@@ -2,5 +2,5 @@
 Legion Grub Theme
 
 ```
-Use grub-customizer to load grub2 theme
+sudo bash install.sh
 ```
