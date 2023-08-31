@@ -1,10 +1,13 @@
 #!/bin/bash
 
+# Comment this line
+sudo sed -e '/GRUB_TERMINAL_OUTPUT/ s/^#*/#/' -i /etc/default/grub
+
 # Grub2 Theme
 
 ROOT_UID=0
 THEME_DIR="/usr/share/grub/themes"
-THEME_NAME=Legion_theme
+THEME_NAME=Legion
 
 MAX_DELAY=20                                        # max delay for user to enter root password
 
