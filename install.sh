@@ -7,7 +7,7 @@ sudo sed -e '/GRUB_TERMINAL_OUTPUT/ s/^#*/#/' -i /etc/default/grub
 
 ROOT_UID=0
 THEME_DIR="/usr/share/grub/themes"
-THEME_NAME=Legion
+THEME_NAME=Legion_theme
 
 MAX_DELAY=20                                        # max delay for user to enter root password
 
