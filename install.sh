@@ -69,6 +69,10 @@ if [ "$UID" -eq "$ROOT_UID" ]; then
   grep "GRUB_THEME=" /etc/default/grub 2>&1 >/dev/null && sed -i '/GRUB_THEME=/d' /etc/default/grub
 
   echo "GRUB_THEME=\"${THEME_DIR}/${THEME_NAME}/theme.txt\"" >> /etc/default/grub
+  
+  echo "GRUB_SAVEDEFAULT=true" >> /etc/default/grub  # Last boot remember
+  
+  sed -e '/console/ s/^#*/#/' -i /etc/default/grub  # Comment this line
 
   # Update grub config
   echo -e "Updating grub config..."
